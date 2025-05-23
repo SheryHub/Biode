@@ -1,2 +1,2 @@
 # Biode
-Biodiversity Streamlit app
+Bio-diversity Streamlit app
