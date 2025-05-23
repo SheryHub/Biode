@@ -3,7 +3,10 @@ import re
 import os
 from classify import GeminiBirdIdentifier
 
-API_KEY = "AIzaSyA-uPJ6MseiNleEdhvpQON6vbAA-pIZ8VQ"
+API_KEY = os.environ.get("API_KEY")
+if not API_KEY:
+    print("Please provide a an api key via API_KEY environment variable")
+    return
 bird_identifier = GeminiBirdIdentifier(api_key=API_KEY)
 
 image_path = "images/images.jpg"  # replace with your local image path
